@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "MonkeyType Mode Tracker",
+    "version": "1.0",
+    "description": "Sends mode information to localhost:9974 when on MonkeyType.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["*://monkeytype.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["*://monkeytype.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
